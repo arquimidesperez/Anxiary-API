@@ -43,7 +43,13 @@ base('Table 1').create([
 ```
 
 ### Wireframes
+<img width="826" alt="Screen Shot 2021-06-07 at 9 36 18 AM" src="https://user-images.githubusercontent.com/67838784/121026246-f1fd2e00-c773-11eb-8241-ffdece5e4ac9.png">
 
+<img width="825" alt="Screen Shot 2021-06-07 at 9 37 49 AM" src="https://user-images.githubusercontent.com/67838784/121026373-10632980-c774-11eb-9a58-534d52cbec88.png">
+
+
+### Component Hierarchy
+<img width="782" alt="Screen Shot 2021-06-07 at 9 08 29 AM" src="https://user-images.githubusercontent.com/67838784/121023493-54a0fa80-c771-11eb-91ce-22dc3118ef40.png">
 
 ### MVP
 * Enable user to write, edit, delete posts
@@ -75,6 +81,8 @@ base('Table 1').create([
 | React Components  |    H     |    3 hours     |            |         |
 | React Classes  |    M     |    3 hours     |            |         |
 | CSS Styling  |    M     |    3 hours     |            |         |
+| Media Queries  |    H     |    3 hours     |            |         |
+| User Authentication  |    L     |    3 hours     |            |         |
 
 
 ### Code Snippet
