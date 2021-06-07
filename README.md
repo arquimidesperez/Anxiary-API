@@ -10,25 +10,61 @@ Anxiary is a front-end react app utilizing the air table API to enable users to 
 API for this project: https://airtable.com/api
 
 ### API Snippet
+```
+var Airtable = require('airtable');
+var base = new Airtable({apiKey: 'YOUR_API_KEY'}).base('appdPcv2eTjIOH8ZJ');
 
+base('Table 1').create([
+  {
+    "fields": {
+      "Date": "2021-06-07",
+      "Notes": "Oh Boy, I hope this gets approved",
+      "Mood": "4",
+      "Title ": "A Second Project"
+    }
+  },
+  {
+    "fields": {
+      "Date": "2021-06-07",
+      "Notes": "Oh Boy, I hope this gets approved",
+      "Mood": "4",
+      "Title ": "A Second Project"
+    }
+  }
+], function(err, records) {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  records.forEach(function (record) {
+    console.log(record.getId());
+  });
+});
+```
 
 ### Wireframes
 
 
 ### MVP
+* Enable user to write, edit, delete posts
+* Enable user to search through previous entries
+* Enable user to track their mood-timeline
+
 
 ### Post-MVP
+* Media queries for users on Mobile vs. Desktop
+* User authentication (login/password)
+
 
 ### Goals
-
 
 | Day    | Deliverable                                                                    | Status |
 | ------ | ------------------------------------------------------------------------------ | ------ |
 | June 7 | Prompt Approval - API Set-UP                                                   |        |
 | June 8 | React Components                                        |        |
 | June 9 | React Classes |        |
-| June 10 | CSS Styling - Flexbox                |        |
-| June 11 | Advanced CSS Styling                  |        |
+| June 10 | CSS Styling & Media Queries - Flexbox                |        |
+| June 11 | User Authentication (Post MVP)                  |        |
 
 ### Priority Matrix
 
