@@ -43,6 +43,11 @@ base('Table 1').create([
 ```
 
 ### Wireframes
+<img width="826" alt="Screen Shot 2021-06-07 at 9 36 18 AM" src="https://user-images.githubusercontent.com/67838784/121026246-f1fd2e00-c773-11eb-8241-ffdece5e4ac9.png">
+<img width="786" alt="Screen Shot 2021-06-07 at 9 36 26 AM" src="https://user-images.githubusercontent.com/67838784/121026253-f3c6f180-c773-11eb-9ee8-b19a9a9126b9.png">
+
+
+### Component Hierarchy
 <img width="782" alt="Screen Shot 2021-06-07 at 9 08 29 AM" src="https://user-images.githubusercontent.com/67838784/121023493-54a0fa80-c771-11eb-91ce-22dc3118ef40.png">
 
 ### MVP
