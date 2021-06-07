@@ -43,7 +43,7 @@ base('Table 1').create([
 ```
 
 ### Wireframes
-<img width="752" alt="Screen Shot 2021-06-07 at 9 07 59 AM" src="https://user-images.githubusercontent.com/67838784/121023383-3affb300-c771-11eb-8dc3-d0c10dfbec5e.png">
+<img width="782" alt="Screen Shot 2021-06-07 at 9 08 29 AM" src="https://user-images.githubusercontent.com/67838784/121023493-54a0fa80-c771-11eb-91ce-22dc3118ef40.png">
 
 ### MVP
 * Enable user to write, edit, delete posts
