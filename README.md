@@ -75,6 +75,8 @@ base('Table 1').create([
 | React Components  |    H     |    3 hours     |            |         |
 | React Classes  |    M     |    3 hours     |            |         |
 | CSS Styling  |    M     |    3 hours     |            |         |
+| Media Queries  |    H     |    3 hours     |            |         |
+| User Authentication  |    L     |    3 hours     |            |         |
 
 
 ### Code Snippet
