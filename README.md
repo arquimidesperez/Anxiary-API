@@ -17,10 +17,30 @@ API for this project: https://airtable.com/api
 
 ### MVP
 
+### Post-MVP
+
+### Goals
+
+
+| Day    | Deliverable                                                                    | Status |
+| ------ | ------------------------------------------------------------------------------ | ------ |
+| June 7 | Prompt Approval - API Set-UP                                                   |        |
+| June 8 | React Components                                        |        |
+| June 9 | React Classes |        |
+| June 10 | CSS Styling - Flexbox                |        |
+| June 11 | Advanced CSS Styling                  |        |
+
 ### Priority Matrix
 
 
 ### Timeframes
+| Component               | Priority | Estimated Time | Time Invested | Actual Time |
+| ----------------------- | :------: | :------------: | :-----------: | :---------: |
+| API Set-UP              |    H     |    2 hours     |         |       |
+| AirTable Get, Post, Delete  |    H     |    3 hours     |            |         |
+| React Components  |    H     |    3 hours     |            |         |
+| React Classes  |    M     |    3 hours     |            |         |
+| CSS Styling  |    M     |    3 hours     |            |         |
 
 
 ### Code Snippet
