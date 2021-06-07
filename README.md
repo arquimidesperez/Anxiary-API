@@ -66,8 +66,6 @@ base('Table 1').create([
 | June 10 | CSS Styling & Media Queries - Flexbox                |        |
 | June 11 | User Authentication (Post MVP)                  |        |
 
-### Priority Matrix
-
 
 ### Timeframes
 | Component               | Priority | Estimated Time | Time Invested | Actual Time |
