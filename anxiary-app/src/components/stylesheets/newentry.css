@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 
 .NewEntry{
   text-align: center;
@@ -25,4 +26,10 @@
 .FormLabels{
   font-family: 'Satisfy';
   font-size: 20px;
+}
+
+textarea{
+  font-family: 'Architects Daughter', sans-serif;
+  font-size: 14px;
+  /* border: none; */
 }
