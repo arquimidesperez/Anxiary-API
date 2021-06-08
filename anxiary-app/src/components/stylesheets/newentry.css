@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+.NewEntry{
+  text-align: center;
+  font-family: 'Satisfy';
+  font-size: 30px;
+}
+
+.EntryForm{
+  margin: auto;
+  margin-top: 20px;
+  width: 50%;
+  text-align: center;
+}
+
+.EntryTitle{
+  width: 500px; 
+}
+
+.Entry{
+  width: 500px;
+  height: 300px;
+}
+
+.FormLabels{
+  font-family: 'Satisfy';
+  font-size: 20px;
+}

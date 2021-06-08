@@ -18,3 +18,31 @@ export const getEntries = async () => {
     console.error(error)
   }
 }
+
+export const newEntry = async (form) => {
+  try {
+    const response = await axios.post(`${url}`, {fields: form}, config);
+    return response.data;
+  } catch (error){
+    console.error(error);
+  }
+}
+
+// export const editEntry = async (id, form) => {
+//   try {
+//     const response = await axios.put(`${url}/${id}`, {fields: form}, config);
+//     return response.data;
+//   } catch (error){
+//     console.error(error);
+//   }
+// }
+
+export const deleteEntry = async (id) => {
+  try {
+    const response = await axios.put(`${url}/${id}`, config);
+    return response.data;
+  } catch (error){
+    console.error(error);
+  }
+}
+

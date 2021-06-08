@@ -2,7 +2,7 @@ import { Route, Switch } from 'react-router-dom';
 // import './App.css';
 import NewEntry from './components/NewEntry';
 import Navbar from './components/Navbar';
-import Secondpage from './components/Secondpage';
+import MoodTimeline from './components/MoodTimeline';
 import Footer from './components/Footer'
 import Landingpage from './components/Landingpage'
 import PastEntries from './components/PastEntries';
@@ -22,8 +22,8 @@ function App() {
         <Route exact path='/pastentry'>
           <PastEntries />
         </Route>
-        <Route exact path='/secondpage'>
-          <Secondpage />
+        <Route exact path='/moodtimeline'>
+          <MoodTimeline />
         </Route>
       </Switch>
 
