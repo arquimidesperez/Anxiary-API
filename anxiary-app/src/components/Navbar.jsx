@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './navbar.css';
+import './stylesheets/navbar.css';
 
 export default function Navbar() {
   return (
     <nav className='NavigationBar'>
       <div className='NavSpacing'>
-      <Link to="/homepage" className='LinkCSS a'>Homepage</Link>
-      <Link to="/secondpage" className='LinkCSS'>Secondpage</Link>
+      <Link to="/" className='LinkCSS a'>HomePage </Link>
+      <Link to="/newentry" className='LinkCSS a'>New Entry  </Link>
+      <Link to="/pastentries" className='LinkCSS a'>Past Entries  </Link>
+      <Link to="/secondpage" className='LinkCSS'>Mood Timeline  </Link>
       </div>
     </nav>
   )

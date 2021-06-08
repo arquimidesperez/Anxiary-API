@@ -1,9 +1,9 @@
-import './footer.css';
+import './stylesheets/footer.css';
 
 export default function FootBar() {
   return (
     <div className='fBar'>
-      <p>This is my footer</p>
+      <p className='fP'>This is my footer</p>
     </div>
   )
 }

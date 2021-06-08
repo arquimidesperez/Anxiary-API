@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+
+h1 {
+  text-align: center;
+  font-family: 'Satisfy';
+  font-size: 100px;
+  color: #fca311
+}
+
+.LandingP{
+  text-align: justify;
+  margin: 0px auto;
+  max-width: 40%;
+}
