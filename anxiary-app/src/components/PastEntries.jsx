@@ -14,4 +14,12 @@ export default function PastEntries() {
     fetchData();
   }, []);
 
+  return (
+    <div>
+      <br />
+      <br />
+      <br />
+      <h3>This is some text</h3>
+    </div>
+  )
 }

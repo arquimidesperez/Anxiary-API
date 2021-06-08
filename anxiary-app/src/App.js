@@ -19,7 +19,7 @@ function App() {
         <Route exact path='/newentry'>
           <NewEntry />
         </Route>
-        <Route exact path='/pastentry'>
+        <Route exact path='/pastentries'>
           <PastEntries />
         </Route>
         <Route exact path='/moodtimeline'>

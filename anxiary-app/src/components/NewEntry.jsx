@@ -1,27 +1,40 @@
-import { useEffect, useState } from 'react';
-import { getEntries } from '../services/api';
+import { useState } from 'react';
+import { useHistory } from 'react-router';
+import { newEntry } from '../services/api';
 import './stylesheets/newentry.css';
 // import { Link } from 'react-router-dom';
 
 export default function CreateEntry(){
 
-  const [entries, setEntries] = useState([]);
+  const defaultObj = {
+    Title: "",
+    Date: "",
+    Entry: "",
+    Mood: ""
+  };
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await getEntries();
-      console.log(res);
-      setEntries(res);
-    };
-    fetchData();
-  }, []);
+  const [input, setInput] = useState(defaultObj);
+  const history = useHistory();
+
 
   const handleChange = (e) => {
-    
+    const { name, value } = e.target;
+
+    setInput((prevInput) => ({
+      ...prevInput,
+      [name]: value,
+    }));
   }
 
+  /**
+   * Need to modify the pastentries to map out the previous entries
+   */
+
   const handleSubmit = async(e) => {
-    
+    e.preventDefault();
+    const response = await newEntry(input);
+    console.log(response);
+    history.push("/pastentries")
   }
   /**
    * For Form:
@@ -38,14 +51,19 @@ export default function CreateEntry(){
       <form className = 'EntryForm' onChange={handleChange} onSubmit={handleSubmit}>
         <label className='FormLabels'>Title</label>
         <br />
-        <input type='text' name='title' className='EntryTitle'/>
+        <input type='text' name='Title' className='EntryTitle'/>
+        <br />
+        <label className='FormLabels'>Date</label>
+        <br />
+        <input type='date' name='Date' className='EntryTitle'/>
         <br />
         <label className='FormLabels'>Write to your Anxiary</label>
         <br />
-        <input type='text' name='title' className='Entry' />
+        <textarea type='text' name='Entry' className='Entry' />
         <br />
-        <label className='FormLabels'>Rate your mood</label>
-        <select name='moodScore'>
+        <label className='FormLabels'>Rate your mood </label>
+        <select name='Mood'>
+          <option value='0'>0</option>
           <option value='1'>1</option>
           <option value='2'>2</option>
           <option value='3'>3</option>
