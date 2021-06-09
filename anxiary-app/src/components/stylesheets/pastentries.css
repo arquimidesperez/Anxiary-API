@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
 .PastEntry{
   text-align: center;
   font-family: 'Satisfy';
   font-size: 30px;
+  margin-top: 70px;
+  margin-bottom: 0px;
 }
 
 .PEntriesDivs{
@@ -14,22 +19,33 @@
 }
 
 .BorderContent{
-  border: 1px black solid; 
+  /* border: 1px black solid;  */
   float:left;
-  width: 500px;
+  width: 440px;
+  height: 86px;
   margin: 10px 0px 10px 0px;
+  padding-left: 10px;
+  font-family: 'Architects Daughter';
 }
 
 .BorderButton{
-  border: 1px black solid; 
+  /* border: 1px black solid;  */
   float:left;
-  width: 180px;
+  width: 240px;
   height: 86px;
   margin: 10px 0px 10px 0px;
 }
 
-button{
+.BorderButton > button{
   height: 86px;
-  width: 180px;
+  width: 80px;
   background-color: #457b9d;
+  font-family: 'Satisfy';
+  color: white;
+  font-size: 16px;
+
+}
+
+.ReturnDiv{
+  margin-bottom: 50px;
 }

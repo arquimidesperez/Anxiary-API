@@ -2,7 +2,7 @@ import './stylesheets/pastentries.css';
 
 import { useEffect, useState } from 'react';
 // import { Link } from 'react-router-dom';
-import { getEntries } from '../services/api';
+import { deleteEntry, getEntries } from '../services/api';
 
 export default function PastEntries() {
   const [entries, setEntries] = useState([]);
@@ -18,13 +18,15 @@ export default function PastEntries() {
     fetchData();
   }, []);
 
+
+  const handleDelete = async () => {
+    await deleteEntry();
+  }
+
   return (
     <div>
-      <br />
-      <br />
-      <br />
       <h4 className='PastEntry'>Past Entries</h4>
-      <div>
+      <div className='ReturnDiv'>
         {entries && entries.map((entry) => {
           return <div className='PEntriesDivs' key={entry.id}>
           <div className='BorderContent'>
@@ -37,7 +39,9 @@ export default function PastEntries() {
           </p>
           </div>
             <div className='BorderButton'>
-            <button>Edit</button>
+              <button>Edit</button>
+              <button>View</button>
+              <button onClick={handleDelete}>Delete</button>
           </div>
       </div>
       })}

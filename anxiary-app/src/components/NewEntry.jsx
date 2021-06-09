@@ -44,9 +44,6 @@ export default function CreateEntry(){
    */
   return (
     <div>
-      <br />
-      <br />
-      <br />
       <h4 className='NewEntry'>Create a new Entry</h4>
       <form className = 'EntryForm' onChange={handleChange} onSubmit={handleSubmit}>
         <label className='FormLabels'>Title</label>
