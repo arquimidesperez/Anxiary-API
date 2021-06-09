@@ -1,3 +1,5 @@
+import './stylesheets/pastentries.css';
+
 import { useEffect, useState } from 'react';
 // import { Link } from 'react-router-dom';
 import { getEntries } from '../services/api';
@@ -17,19 +19,32 @@ export default function PastEntries() {
   }, []);
 
   return (
+    <div>
+      <br />
+      <br />
+      <br />
+      <h4 className='PastEntry'>Past Entries</h4>
       <div>
-      {entries && entries.map((entry) => {
-        return <div key={entry.id}>
-          {/* <Link to={`/pastentries/${entry.id}`}>{entry.field.Title}</Link> */}
-          <p>{entry.fields.Title}</p>
+        {entries && entries.map((entry) => {
+          return <div className='PEntriesDivs' key={entry.id}>
+          <div className='BorderContent'>
+          <p>
+            Title of Entry: {entry.fields.Title}
+            <br />
+            Date of Entry: {entry.fields.Date}
+            <br />
+            Moodscore: {entry.fields.Mood}
+          </p>
           </div>
+            <div className='BorderButton'>
+            <button>Edit</button>
+          </div>
+      </div>
       })}
+      </div>
       <br />
       <br />
       <br />
-      <br />
-      <br />
-      <h3>This is some text</h3>
     </div>
   )
 }

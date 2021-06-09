@@ -14,6 +14,7 @@ export const getEntries = async () => {
   try {
     const response = await axios.get(url, config);
     console.log(response.data.records);
+    return response.data.records;
   } catch (error) {
     console.error(error)
   }

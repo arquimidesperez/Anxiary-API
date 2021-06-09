@@ -1,0 +1,35 @@
+.PastEntry{
+  text-align: center;
+  font-family: 'Satisfy';
+  font-size: 30px;
+}
+
+.PEntriesDivs{
+  border: 1px black solid;
+  width: 700px;
+  height: 100px;
+  margin: auto;
+  margin-top: 2px;
+  padding: 0px 0px 10px 15px;
+}
+
+.BorderContent{
+  border: 1px black solid; 
+  float:left;
+  width: 500px;
+  margin: 10px 0px 10px 0px;
+}
+
+.BorderButton{
+  border: 1px black solid; 
+  float:left;
+  width: 180px;
+  height: 86px;
+  margin: 10px 0px 10px 0px;
+}
+
+button{
+  height: 86px;
+  width: 180px;
+  background-color: #457b9d;
+}
