@@ -29,14 +29,24 @@ export const newEntry = async (form) => {
   }
 }
 
-// export const editEntry = async (id, form) => {
-//   try {
-//     const response = await axios.put(`${url}/${id}`, {fields: form}, config);
-//     return response.data;
-//   } catch (error){
-//     console.error(error);
-//   }
-// }
+
+export const getEntry = async (id) => {
+  try {
+    const response = await axios.get(`${url}/${id}`, config);
+    return response.data;
+  } catch (error){
+    console.error(error);
+  } 
+}
+
+export const editEntry = async (id, form) => {
+  try {
+    const response = await axios.put(`${url}/${id}`, {fields: form}, config);
+    return response.data;
+  } catch (error){
+    console.error(error);
+  }
+}
 
 export const deleteEntry = async (id) => {
   try {

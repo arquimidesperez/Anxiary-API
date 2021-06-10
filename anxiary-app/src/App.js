@@ -6,6 +6,7 @@ import MoodTimeline from './components/MoodTimeline';
 import Footer from './components/Footer'
 import Landingpage from './components/Landingpage'
 import PastEntries from './components/PastEntries';
+import EditViewEntries from './components/EditViewEntries';
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
         </Route>
         <Route exact path='/pastentries'>
           <PastEntries />
+        </Route>
+        <Route exact path='/pastentries/editview/:id'>
+          <EditViewEntries />
         </Route>
         <Route exact path='/moodtimeline'>
           <MoodTimeline />

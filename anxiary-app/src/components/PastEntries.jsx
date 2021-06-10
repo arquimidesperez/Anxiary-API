@@ -28,7 +28,6 @@ export default function PastEntries() {
   }
 
 
-
   return (
     <div>
 
@@ -46,8 +45,7 @@ export default function PastEntries() {
           </p>
           </div>
             <div className='BorderButton'>
-              <button><Link to={`/pastentries/${entry.id}`} className='EditB'>Edit</Link></button>
-              <button onClick={() => setModalOpen(true)}>View</button>
+              <button><Link to={`/pastentries/editview/${entry.id}`} className='EditB'>View & Edit</Link></button>
               <button onClick={()=>handleDelete(entry.id, index)}>Delete</button>
             </div>
             {modalOpen ? 
