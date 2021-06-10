@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { getEntry } from '../services/api';
+import { Link, useParams } from 'react-router-dom';
+import { editEntry, getEntry } from '../services/api';
 
 export default function EditViewEntries() {
   const { id } = useParams();
@@ -15,14 +15,30 @@ export default function EditViewEntries() {
     fetchData();
   }, []);
 
-  console.log(editEntries.Date);
+  //take editEntires for handle edit
+  //edit entry from api.js
 
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setEditEntries((prevInput) => ({
+      ...prevInput,
+      [name]: value,
+    }));
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const response = editEntry(id, editEntries);
+    console.log(response);
+  }
 
   return (
     <div>
       <h4 className='NewEntry'>View and Edit a Previous Entry</h4>
       <div>
-          <form className = 'EntryForm'>
+          <form className = 'EntryForm' onChange={handleChange} onSubmit={handleSubmit}>
           <label className='FormLabels'>Title</label>
           <br />
           <input type='text' value={editEntries.Title} name='Title' className='EntryTitle'/>
