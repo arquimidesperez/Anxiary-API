@@ -6,44 +6,57 @@ import { deleteEntry, getEntries } from '../services/api';
 
 export default function PastEntries() {
   const [entries, setEntries] = useState([]);
+  const [modalOpen, setModalOpen] = useState(false);
   // const { id } = useParams;
   // console.log(id);
 
+
+  const fetchData = async () => {
+    const res = await getEntries();
+    setEntries(res);
+    console.log(res);
+  };
+
   useEffect(() => {
-    const fetchData = async () => {
-      const res = await getEntries();
-      setEntries(res);
-      console.log(res);
-    };
     fetchData();
   }, []);
 
 
-  const handleDelete = async () => {
-    await deleteEntry();
+  const handleDelete = async (id, index) => {
+    await deleteEntry(id);
+    fetchData();
   }
+
+
 
   return (
     <div>
+
       <h4 className='PastEntry'>Past Entries</h4>
       <div className='ReturnDiv'>
-        {entries && entries.map((entry) => {
+        {entries && entries.map((entry, index) => {
           return <div className='PEntriesDivs' key={entry.id}>
           <div className='BorderContent'>
           <p>
-            Title of Entry: {entry.fields.Title}
+            Title of Entry: {entry.fields?.Title}
             <br />
-            Date of Entry: {entry.fields.Date}
+            Date of Entry: {entry.fields?.Date}
             <br />
-            Moodscore: {entry.fields.Mood}
+            Moodscore: {entry.fields?.Mood}
           </p>
           </div>
             <div className='BorderButton'>
               <button>Edit</button>
-              <button>View</button>
-              <button onClick={handleDelete}>Delete</button>
+              <button onClick={() => setModalOpen(true)}>View</button>
+              <button onClick={()=>handleDelete(entry.id, index)}>Delete</button>
+            </div>
+            {modalOpen ? 
+                  <div className='Modal'>
+                <p>{entry.fields.Title}</p>
+                <button onClick={() => setModalOpen(false)}>Close</button>
+                  </div>      
+                  : ''}
           </div>
-      </div>
       })}
       </div>
       <br />

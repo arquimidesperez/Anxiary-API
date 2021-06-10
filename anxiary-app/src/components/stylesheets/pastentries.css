@@ -49,3 +49,9 @@
 .ReturnDiv{
   margin-bottom: 50px;
 }
+
+.Modal{
+  border: 1px solid black;
+  background-color: white;
+  z-index: 10;
+}

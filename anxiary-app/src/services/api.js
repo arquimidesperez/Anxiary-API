@@ -40,7 +40,7 @@ export const newEntry = async (form) => {
 
 export const deleteEntry = async (id) => {
   try {
-    const response = await axios.put(`${url}/${id}`, config);
+    const response = await axios.delete(`${url}/${id}`, config);
     return response.data;
   } catch (error){
     console.error(error);
