@@ -1,7 +1,7 @@
 import './stylesheets/pastentries.css';
 
 import { useEffect, useState } from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { deleteEntry, getEntries } from '../services/api';
 
 export default function PastEntries() {
@@ -46,14 +46,24 @@ export default function PastEntries() {
           </p>
           </div>
             <div className='BorderButton'>
-              <button>Edit</button>
+              <button><Link to={`/pastentries/${entry.id}`} className='EditB'>Edit</Link></button>
               <button onClick={() => setModalOpen(true)}>View</button>
               <button onClick={()=>handleDelete(entry.id, index)}>Delete</button>
             </div>
             {modalOpen ? 
                   <div className='Modal'>
-                <p>{entry.fields.Title}</p>
-                <button onClick={() => setModalOpen(false)}>Close</button>
+                    <div className='ModalContent'>
+                      <p>
+                      Title: {entry.fields.Title}
+                      <br />
+                      Date: {entry.fields?.Date}
+                      <br />
+                      Entry: {entry.fields.Entry}
+                      <br />
+                      Moodscore: {entry.fields?.Mood}
+                      </p>
+                      <button onClick={() => setModalOpen(false)}>Close</button>
+                    </div>
                   </div>      
                   : ''}
           </div>
