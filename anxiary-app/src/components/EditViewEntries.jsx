@@ -9,11 +9,11 @@ export default function EditViewEntries() {
   useEffect(() => {
     const fetchData = async () => {
       const response = await getEntry(id);
-      console.log(response.fields);
+      // console.log(response.fields);
       setEditEntries(response.fields);
     }
     fetchData();
-  }, []);
+  }, [id]);
 
   //take editEntires for handle edit
   //edit entry from api.js
@@ -30,8 +30,9 @@ export default function EditViewEntries() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // eslint-disable-next-line
     const response = editEntry(id, editEntries);
-    console.log(response);
+    // console.log(response);
   }
 
   return (

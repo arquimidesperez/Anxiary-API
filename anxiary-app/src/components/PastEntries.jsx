@@ -14,7 +14,7 @@ export default function PastEntries() {
   const fetchData = async () => {
     const res = await getEntries();
     setEntries(res);
-    console.log(res);
+    // console.log(res);
   };
 
   useEffect(() => {
