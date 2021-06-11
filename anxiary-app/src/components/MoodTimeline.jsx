@@ -11,10 +11,11 @@ export default function MoodTimeline() {
   const [count, setCount] = useState(0);
   const Month = new MonthViewCalender();
   const [month, setMonth] = useState(Month);
-  const [currentDay, setCurrentDay] = useState(Month.currentDateOfMonth());
+  // const [currentDay, setCurrentDay] = useState(Month.currentDateOfMonth());
   const [monthArray, setMonthArray] = useState(Month.monthArray());
   const [monthName, setMonthName] = useState(Month.monthName);
   const [entries, setEntries] = useState([]);
+  const [monthYear, setMonthYear] = useState(Month.yearNumber);
 
   
 
@@ -22,7 +23,7 @@ export default function MoodTimeline() {
     const fetchData = async () => {
       const res = await getEntries();
       setEntries(res);
-      console.log(res);
+      // console.log(res);
     };
     fetchData();
   }, []);
@@ -48,17 +49,33 @@ export default function MoodTimeline() {
 
 
   const displayDate = (day) => {
-    console.log(hotDay);
+    // console.log(hotDay);
     // console.log(day);
     let found;
     if (hotDay.includes(day.formattedDate)) {
       found = entries.find((entry) => {
         return entry.fields?.Date == day.formattedDate
       });
-      console.log(found);
+      // console.log(found);
     }
     if (found) {
-      return <div className="Day"> {day.date} + {found.fields.Mood} </div>
+      // if (found.fields.Mood = ) {
+        
+      // }
+      var color;
+      if(found.fields.Mood == 1){
+        color = '#9b2226';
+      } else if(found.fields.Mood == 2){
+        color = '#bb3e03';
+      } else if(found.fields.Mood == 3){
+        color = '#faa307';
+      } else if(found.fields.Mood == 4){
+        color = '#90be6d';
+      } else if(found.fields.Mood == 5){
+        color = '#2a9d8f';
+      };
+
+      return <div className="Day" style={{backgroundColor: color}}> {day.date} </div>
     } else {
       return <div className="Day"> {day.date} </div>      
     }
@@ -71,7 +88,8 @@ export default function MoodTimeline() {
         <div className="MonthContainer">
           <p>
           {button()}      
-          {monthName}      
+            {monthName} 
+            {monthYear}
           <button onClick={() => setCount(count + 1)}>&gt;</button>
           </p>
         </div>
