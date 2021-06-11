@@ -4,6 +4,7 @@ const TIME = moment();
 
 class MonthViewCalender {
   constructor(month = TIME) {
+    // eslint-disable-next-line
     this.now = typeof month == "string" ? eval(month) : month;
     this.monthName = this.now.format("MMMM");
     this.monthNumber = this.now.format("MM");
@@ -24,7 +25,7 @@ class MonthViewCalender {
     let difference = length - start;
     let array = [];
     // Add dates of last month to array
-    if (start != 0) {
+    if (start !== 0) {
       for (let v = difference + 1; v <= length; v++) {
         array.push(this.buildDateObject(v, -1));
       }
@@ -33,7 +34,7 @@ class MonthViewCalender {
       array.push(this.buildDateObject(v, 0, month, year));
     }
     // adds dates of next month to array
-    if (this.monthEndWeekDay != 6) {
+    if (this.monthEndWeekDay !== 6) {
       let d = this.monthEndWeekDay;
       let count = 1;
       for (let v = d; v < 6; v++) {
@@ -58,4 +59,5 @@ class MonthViewCalender {
     return moment().date();
   }
 }
+
 module.exports = MonthViewCalender;

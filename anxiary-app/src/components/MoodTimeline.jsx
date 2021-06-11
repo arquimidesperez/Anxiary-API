@@ -15,6 +15,7 @@ export default function MoodTimeline() {
   const [monthArray, setMonthArray] = useState(Month.monthArray());
   const [monthName, setMonthName] = useState(Month.monthName);
   const [entries, setEntries] = useState([]);
+  // eslint-disable-next-line
   const [monthYear, setMonthYear] = useState(Month.yearNumber);
 
   
@@ -54,6 +55,7 @@ export default function MoodTimeline() {
     let found;
     if (hotDay.includes(day.formattedDate)) {
       found = entries.find((entry) => {
+        // eslint-disable-next-line
         return entry.fields?.Date == day.formattedDate
       });
       // console.log(found);
@@ -63,14 +65,19 @@ export default function MoodTimeline() {
         
       // }
       var color;
-      if(found.fields.Mood == 1){
+        // eslint-disable-next-line
+      if (found.fields.Mood == 1) {
         color = '#9b2226';
-      } else if(found.fields.Mood == 2){
+        // eslint-disable-next-line
+      } else if (found.fields.Mood == 2) {
         color = '#bb3e03';
+        // eslint-disable-next-line
       } else if(found.fields.Mood == 3){
         color = '#faa307';
-      } else if(found.fields.Mood == 4){
+        // eslint-disable-next-line
+      } else if (found.fields.Mood == 4) {
         color = '#90be6d';
+        // eslint-disable-next-line
       } else if(found.fields.Mood == 5){
         color = '#2a9d8f';
       };
