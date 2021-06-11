@@ -60,4 +60,4 @@ class MonthViewCalender {
   }
 }
 
-module.exports = MonthViewCalender;
+export default MonthViewCalender;
