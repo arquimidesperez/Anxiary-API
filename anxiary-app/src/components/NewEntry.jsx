@@ -59,15 +59,16 @@ export default function CreateEntry(){
         <textarea type='text' name='Entry' className='Entry' />
         <br />
         <label className='FormLabels'>Rate your mood </label>
+        <br />
         <select name='Mood'>
-          <option value='1'>1</option>
-          <option value='2'>2</option>
-          <option value='3'>3</option>
-          <option value='4'>4</option>
-          <option value='5'>5</option>
+          <option value='1'>1 - Awful</option>
+          <option value='2'>2 - Bad</option>
+          <option value='3'>3 - Neutral</option>
+          <option value='4'>4 - Good</option>
+          <option value='5'>5 - Amazing</option>
         </select>
         <br />
-        <button type='Submit'>Submit</button>
+        <button className='SubmitButton' type='Submit'>Submit</button>
       </form>
     </div>
   )

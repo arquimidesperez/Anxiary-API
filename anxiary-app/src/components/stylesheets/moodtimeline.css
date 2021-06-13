@@ -2,12 +2,13 @@
   margin: auto;
   margin-top: 100px;
   background-color: #457b9d;
-  width: auto;
+  width: 854px;
   border: 1px black solid;
   text-align: center;
   font-family: 'Satisfy';
   font-size: 25px;
   color: white;
+  float:left;
 }
 
 .WeekDay{
@@ -23,7 +24,6 @@
 
 .CalendarHolder{
   margin: auto;
-  margin-top: 100px;
   width: 900px;
 }
 
@@ -36,4 +36,13 @@
   height: 40px;
   font-family: 'Architects Daughter';
   font-size: 18px;
+}
+
+.MonthChange{
+  background-color: white;
+  width: 150px;
+  height: 50px;
+  font-size: 16px;
+  font-family: 'Satisfy';
+  color: #457b9d;
 }

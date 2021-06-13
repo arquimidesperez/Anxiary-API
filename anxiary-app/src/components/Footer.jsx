@@ -5,13 +5,15 @@ export default function FootBar() {
     <div className='FooterBar'>
       <div className='FooterDiv'>
         <a href='https://github.com/arquimidesperez'
-            target="_blank">
+            target="_blank"
+          rel="noreferrer">
           <i class="fab fa-github"></i>
         </a>
       </div>
       <div className='FooterDiv'>
         <a href='https://www.linkedin.com/in/arquimides-perez-leyva-929880161/'
-            target="_blank">
+          target="_blank"
+          rel="noreferrer">
           <i class="fab fa-linkedin"></i>
         </a>  
       </div>

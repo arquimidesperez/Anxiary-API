@@ -4,18 +4,13 @@ import MonthViewCalender from '../lib/Calendar';
 import { getEntries } from '../services/api';
 import './stylesheets/moodtimeline.css'
 
-// import MonthViewCalender from "../../Calender/MonthViewCalender";
-// import MonthDay from "../calender/monthDay";
-// import { useState, useEffect } from "react";
 export default function MoodTimeline() {
   const [count, setCount] = useState(0);
   const Month = new MonthViewCalender();
   const [month, setMonth] = useState(Month);
-  // const [currentDay, setCurrentDay] = useState(Month.currentDateOfMonth());
   const [monthArray, setMonthArray] = useState(Month.monthArray());
   const [monthName, setMonthName] = useState(Month.monthName);
   const [entries, setEntries] = useState([]);
-  // eslint-disable-next-line
   const [monthYear, setMonthYear] = useState(Month.yearNumber);
 
   
@@ -40,7 +35,7 @@ export default function MoodTimeline() {
     setMonthName(month.monthName);
   }, [month]);
   const button = () => {
-      return <button onClick={() => setCount(count - 1)}>&lt;</button>;
+      return <button className='MonthChange' onClick={() => setCount(count - 1)}> Previous Month</button>;
   };
 
   const hotDay = [];
@@ -67,19 +62,19 @@ export default function MoodTimeline() {
       var color;
         // eslint-disable-next-line
       if (found.fields.Mood == 1) {
-        color = '#9b2226';
+        color = '#cdebe6';
         // eslint-disable-next-line
       } else if (found.fields.Mood == 2) {
-        color = '#bb3e03';
+        color = '#a8dadc';
         // eslint-disable-next-line
       } else if(found.fields.Mood == 3){
-        color = '#faa307';
+        color = '#77abbd';
         // eslint-disable-next-line
       } else if (found.fields.Mood == 4) {
-        color = '#90be6d';
+        color = '#457b9d';
         // eslint-disable-next-line
       } else if(found.fields.Mood == 5){
-        color = '#2a9d8f';
+        color = '#31587a';
       };
 
       return <div className="Day" style={{backgroundColor: color}}> {day.date} </div>
@@ -90,26 +85,30 @@ export default function MoodTimeline() {
 
   // <div className="flex flex-wrap m-1 md:m-4 md:mt-10 sm:p-1 rounded border-solid border md:border-2 md:border-gray-400 md:shadow-lg">
   return (
-    <div className="CalendarHolder">
-      <div className="w-full">
-        <div className="MonthContainer">
-          <p>
-          {button()}      
-            {monthName} 
-            {monthYear}
-          <button onClick={() => setCount(count + 1)}>&gt;</button>
-          </p>
-        </div>
-        <div className="flex text-sm text-center">
-          <div className="WeekDay">Sunday</div>
-          <div className="WeekDay">Monday</div>
-          <div className="WeekDay">Tuesday</div>
-          <div className="WeekDay">Wednesday</div>
-          <div className="WeekDay">Thursday</div>
-          <div className="WeekDay">Friday</div>
-          <div className="WeekDay">Saturday</div>
-        </div>
+
+      <div className="CalendarHolder">
+
+      <div className="MonthContainer">
+            <p>
+              {monthName} 
+              {monthYear}
+              <br />
+            {button () }      
+            <button className='MonthChange' onClick={() => setCount(count + 1)}> Next Month</button>
+            </p>
       </div>
+      
+          <div className="WeekHolder">
+            <div className="WeekDay">Sunday</div>
+            <div className="WeekDay">Monday</div>
+            <div className="WeekDay">Tuesday</div>
+            <div className="WeekDay">Wednesday</div>
+            <div className="WeekDay">Thursday</div>
+            <div className="WeekDay">Friday</div>
+            <div className="WeekDay">Saturday</div>
+          </div>
+        
+
       {monthArray.map((day, index) => {
         return (displayDate(day))
         // <MonthDay
