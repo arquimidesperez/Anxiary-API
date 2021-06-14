@@ -64,7 +64,7 @@
 }
 
 .DropDownOptions{
-  display: block;
+  display: none;
   background-color: #457b9d;
   width: 200px;
   border: black 1px solid;
@@ -72,9 +72,17 @@
 
 
 @media screen and (max-width: 1024px) {
-  .MobileNavbar{
+  .MobileNavbar {
     display: block;
   } 
+
+  .DropDownButton{
+    display: block;
+  }
+
+  .MobileNavbar:hover .DropDownOptions{
+    display: block;
+  }
 
   .DesktopNavbar{
     display: none;
