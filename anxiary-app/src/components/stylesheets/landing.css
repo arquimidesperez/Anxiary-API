@@ -1,15 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
 
-h1 {
+.Anxiary {
   text-align: center;
   font-family: 'Satisfy', sans-serif;
   font-size: 100px;
-  color: #fca311
+  color: #fca311;
+  margin-bottom: -30px;
 }
 
 .LandingP{
   text-align: justify;
   margin: 0px auto;
   max-width: 40%;
+}
+
+.MarginSpacing{
+  margin-top: 50px;
+  margin-bottom: 120px;
+}
+
+@media screen and (max-width: 1024px) {
+  .LandingP{
+    text-align: justify;
+    margin: 0px auto;
+    max-width: 65%;
+
+  }
+
 }

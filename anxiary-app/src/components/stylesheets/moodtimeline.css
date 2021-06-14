@@ -46,3 +46,55 @@
   font-family: 'Satisfy';
   color: #457b9d;
 }
+
+@media screen and (max-width: 1024px){
+  .MonthContainer{
+  margin: auto;
+  margin-top: 100px;
+  background-color: #457b9d;
+  width: 712px;
+  border: 1px black solid;
+  text-align: center;
+  font-family: 'Satisfy';
+  font-size: 16px;
+  color: white;
+  float:left;
+}
+
+.WeekDay{
+  float:left;
+  border: 1px lightgrey solid;
+  width: 100px;
+  text-align: center;
+  height: 30px;
+  padding-top: 10px;
+  font-family: 'Satisfy';
+  font-size: 16px;
+}
+
+.CalendarHolder{
+  margin: auto;
+  width: 800px;
+}
+
+.Day{
+  float:left;
+  border: 1px lightgrey solid;
+  width: 100px;
+  text-align: center;
+  padding-top: 10px;
+  height: 30px;
+  font-family: 'Architects Daughter';
+  font-size: 18px;
+}
+
+.MonthChange{
+  background-color: white;
+  width: 150px;
+  height: 50px;
+  font-size: 16px;
+  font-family: 'Satisfy';
+  color: #457b9d;
+}
+
+}
