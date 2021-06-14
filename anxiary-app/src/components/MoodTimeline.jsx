@@ -1,4 +1,5 @@
 // import CalendarHeatmap from 'reactjs-calendar-heatmap'
+// Special thanks to Corey Gibson, this literally would not have been possible without him
 import { useState, useEffect } from 'react';
 import MonthViewCalender from '../lib/Calendar';
 import { getEntries } from '../services/api';
@@ -46,20 +47,15 @@ export default function MoodTimeline() {
 
 
   const displayDate = (day) => {
-    // console.log(hotDay);
-    // console.log(day);
+
     let found;
     if (hotDay.includes(day.formattedDate)) {
       found = entries.find((entry) => {
         // eslint-disable-next-line
         return entry.fields?.Date == day.formattedDate
       });
-      // console.log(found);
     }
     if (found) {
-      // if (found.fields.Mood = ) {
-        
-      // }
       var color;
         // eslint-disable-next-line
       if (found.fields.Mood == 1) {
@@ -84,7 +80,6 @@ export default function MoodTimeline() {
     }
   }
 
-  // <div className="flex flex-wrap m-1 md:m-4 md:mt-10 sm:p-1 rounded border-solid border md:border-2 md:border-gray-400 md:shadow-lg">
   return (
 
       <div className="CalendarHolder">
@@ -111,51 +106,7 @@ export default function MoodTimeline() {
 
       {monthArray.map((day, index) => {
         return (displayDate(day))
-        // <MonthDay
-        //   day={day}
-        //   today={currentDay}
-        //   monthName={monthName}
-        //   key={index}
-        //   index={index}
-        // />
       })}
     </div>
   );
 }
-
-// export default function MoodTimeline() {
-//   const calendar = new MonthViewCalendar();
-//   const [count, setCount] = useState(0);
-//   const [currentMonth, setCurrentMonth] = useState(calendar);
-//   const [monthName, setMonthName] = useState(calendar.monthName);
-//   const [monthArray, setMonthArray] = useState(calendar.monthArray());
-//   console.log(calendar);
-//   console.log(calendar.monthArray());
-
-//   // useEffect(() => {
-//   //   setCurrentMonth(new MonthViewCalendar(`moment().add(${count}, 'month')`));
-//   // }, [count]);
-
-//   // useEffect(() => {
-//   //   setMonthArray(calendar.monthArray());
-//   //   setMonthName(calendar.monthName);
-//   // }, [currentMonth]);
-
-
-//   return (
-//     <div>
-//             <br />
-//       <br />
-//       <br />
-//       <button onClick={() => { setCount(prevCount => prevCount - 1) }}> - </button>
-//       <div>{monthName}</div>
-//       <button onClick={() => { setCount(prevCount => prevCount + 1) }}> + </button>
-//       {monthArray.map((day) => {
-//         return (
-//           <div>{day.date}</div>
-//         )
-//       })}
-//     </div>
-//   )
-  
-// }

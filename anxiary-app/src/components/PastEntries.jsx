@@ -6,10 +6,6 @@ import { deleteEntry, getEntries } from '../services/api';
 
 export default function PastEntries() {
   const [entries, setEntries] = useState([]);
-  const [modalOpen, setModalOpen] = useState(false);
-  // const { id } = useParams;
-  // console.log(id);
-
 
   const fetchData = async () => {
     const res = await getEntries();
@@ -48,22 +44,6 @@ export default function PastEntries() {
               <button><Link to={`/pastentries/editview/${entry.id}`} className='EditB'>View & Edit</Link></button>
               <button onClick={()=>handleDelete(entry.id, index)}>Delete</button>
             </div>
-            {modalOpen ? 
-                  <div className='Modal'>
-                    <div className='ModalContent'>
-                      <p>
-                      Title: {entry.fields.Title}
-                      <br />
-                      Date: {entry.fields?.Date}
-                      <br />
-                      Entry: {entry.fields.Entry}
-                      <br />
-                      Moodscore: {entry.fields?.Mood}
-                      </p>
-                      <button onClick={() => setModalOpen(false)}>Close</button>
-                    </div>
-                  </div>      
-                  : ''}
           </div>
       })}
       </div>
