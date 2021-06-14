@@ -91,8 +91,7 @@ export default function MoodTimeline() {
 
       <div className="MonthContainer">
             <p>
-              {monthName} 
-              {monthYear}
+              {monthName}  {monthYear}
               <br />
             {button () }      
             <button className='MonthChange' onClick={() => setCount(count + 1)}> Next Month</button>
