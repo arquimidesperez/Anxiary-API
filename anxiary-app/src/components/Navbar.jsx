@@ -16,10 +16,25 @@ export default function Navbar() {
           <Link to="/moodtimeline" className='LinkCSS'>
             <i class="far fa-calendar-alt"/> Mood Timeline </Link>
         </div>
-        <div className='MobileNavbar'>
-        <Link to="/" className='LinkCSS'>
-            <i class="fas fa-home"/> HomePage </Link>
-        </div>
+
+          <div className='MobileNavbar'>
+            <button className='DropDownButton'> <i class="fas fa-bars"></i> </button>
+              <div className='DropDownOptions'>
+
+                <Link to="/" className='MobileLinkCSS'>
+                  <i class="fas fa-home" /> HomePage </Link>
+                <br />
+                <Link to="/newentry" className='MobileLinkCSS'>
+                  <i class="fas fa-pencil-alt" /> New Entry </Link>
+                <br />            
+                <Link to="/pastentries" className='MobileLinkCSS'>
+                  <i class="fas fa-hourglass-end" /> Past Entries </Link>
+                <br />            
+                <Link to="/moodtimeline" className='MobileLinkCSS'>
+                  <i class="far fa-calendar-alt" /> Mood Timeline </Link>
+                
+              </div>
+          </div>
       </div>
     </nav>
   )

@@ -11,6 +11,7 @@ export default function MoodTimeline() {
   const [monthArray, setMonthArray] = useState(Month.monthArray());
   const [monthName, setMonthName] = useState(Month.monthName);
   const [entries, setEntries] = useState([]);
+  //eslint-disable-next-line
   const [monthYear, setMonthYear] = useState(Month.yearNumber);
 
   
